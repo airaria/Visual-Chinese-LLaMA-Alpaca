@@ -60,7 +60,7 @@ Visual-Chinese-LLaMA-Alpaca（VisualCLA）是一个支持图像和文本输入�
 VisualCLA由Vision Encoder、Resampler和LLM三部分组成：
 
 * **Vision Encoder**：采用ViT结构，对输入图像编码，得到图像的序列表示。发布的VisualCLA模型采用了CLIP-ViT-L/14作为图像编码器的结构和初始化权重。
-* **Resampler**：采用6层的类BERT结构，通过可训练的query向量对图像表示进行重采样，减小图像表示的长度。然后，通过线性层将图形表示对齐到LLM的维度。该部分的参数从头开始训练。
+* **Resampler**：采用6层的类BERT结构，其结构与功能类似于Flamingo中的Perceiver Resampler或BLIP-2中的Q-Former，通过可训练的query向量对图像表示进行重采样，减小图像表示的长度。然后，通过线性层将图形表示对齐到LLM的维度。该部分的参数从头开始训练。
 * **LLM**：采用LLaMA模型，并使用Chinese-Alpaca-Plus 7B初始化。
 
 图像经过Vision Encoder编码，通过Resampler映射为固定长度的表示。随后，将图像和文本表示拼接后送入LLM。LLM根据图像和文本指令生成结果。

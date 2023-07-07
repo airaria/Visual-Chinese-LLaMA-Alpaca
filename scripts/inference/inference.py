@@ -71,8 +71,6 @@ def main():
         model = PeftModel.from_pretrained(
             base_model, 
             args.lora_model, 
-            # torch_dtype=load_type, 
-            # device_map=device_map
         )
     else:
         model = base_model
@@ -112,7 +110,7 @@ def main():
             except FileNotFoundError:
                 print(f"Cannot find file {image_path}. Clear history")
                 history = []
-            # print(history)
+
     logger.info("*** Exit Inference ***")
 
 
