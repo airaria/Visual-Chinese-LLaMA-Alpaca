@@ -1,0 +1,632 @@
+[
+  {
+    "id": "000000441147",
+    "image": "COCO_val2014_000000441147.jpg",
+    "instruction": "图像中的两个手提箱是什么颜色的？",
+    "type": "conv",
+    "question_id": 0
+  },
+  {
+    "id": "000000441147",
+    "image": "COCO_val2014_000000441147.jpg",
+    "instruction": "全面细致地分析图像。",
+    "type": "detail",
+    "question_id": 1
+  },
+  {
+    "id": "000000441147",
+    "image": "COCO_val2014_000000441147.jpg",
+    "instruction": "哪些潜在因素能让这些手提箱变得有价值？",
+    "type": "complex",
+    "question_id": 2
+  },
+  {
+    "id": "000000353536",
+    "image": "COCO_val2014_000000353536.jpg",
+    "instruction": "图像中桌子上的主要物体是什么？",
+    "type": "conv",
+    "question_id": 3
+  },
+  {
+    "id": "000000353536",
+    "image": "COCO_val2014_000000353536.jpg",
+    "instruction": "描述以下图像。",
+    "type": "detail",
+    "question_id": 4
+  },
+  {
+    "id": "000000353536",
+    "image": "COCO_val2014_000000353536.jpg",
+    "instruction": "最近在这个桌子周围可能发生了什么活动？其后果可能是什么？",
+    "type": "complex",
+    "question_id": 5
+  },
+  {
+    "id": "000000506095",
+    "image": "COCO_val2014_000000506095.jpg",
+    "instruction": "图像的主要焦点是什么？",
+    "type": "conv",
+    "question_id": 6
+  },
+  {
+    "id": "000000506095",
+    "image": "COCO_val2014_000000506095.jpg",
+    "instruction": "这张照片是关于什么的？",
+    "type": "detail",
+    "question_id": 7
+  },
+  {
+    "id": "000000506095",
+    "image": "COCO_val2014_000000506095.jpg",
+    "instruction": "猫对笔记本电脑感兴趣的原因可能是什么？",
+    "type": "complex",
+    "question_id": 8
+  },
+  {
+    "id": "000000514915",
+    "image": "COCO_val2014_000000514915.jpg",
+    "instruction": "图片中的狗是什么颜色的？",
+    "type": "conv",
+    "question_id": 9
+  },
+  {
+    "id": "000000514915",
+    "image": "COCO_val2014_000000514915.jpg",
+    "instruction": "描述以下图像。",
+    "type": "detail",
+    "question_id": 10
+  },
+  {
+    "id": "000000514915",
+    "image": "COCO_val2014_000000514915.jpg",
+    "instruction": "为什么狗会选择躺在这里的地板上？",
+    "type": "complex",
+    "question_id": 11
+  },
+  {
+    "id": "000000056013",
+    "image": "COCO_val2014_000000056013.jpg",
+    "instruction": "这辆装有行李袋的手推车在哪里？",
+    "type": "conv",
+    "question_id": 12
+  },
+  {
+    "id": "000000056013",
+    "image": "COCO_val2014_000000056013.jpg",
+    "instruction": "描述以下图像。",
+    "type": "detail",
+    "question_id": 13
+  },
+  {
+    "id": "000000056013",
+    "image": "COCO_val2014_000000056013.jpg",
+    "instruction": "工作人员在大堂搬运行李时可能会遇到哪些挑战？",
+    "type": "complex",
+    "question_id": 14
+  },
+  {
+    "id": "000000408439",
+    "image": "COCO_val2014_000000408439.jpg",
+    "instruction": "图片中的水体是什么？",
+    "type": "conv",
+    "question_id": 15
+  },
+  {
+    "id": "000000408439",
+    "image": "COCO_val2014_000000408439.jpg",
+    "instruction": "你能详细说明所提供图片的元素吗？",
+    "type": "detail",
+    "question_id": 16
+  },
+  {
+    "id": "000000408439",
+    "image": "COCO_val2014_000000408439.jpg",
+    "instruction": "火车在这样一条风景优美的路线上行驶的可能原因是什么？",
+    "type": "complex",
+    "question_id": 17
+  },
+  {
+    "id": "000000164255",
+    "image": "COCO_val2014_000000164255.jpg",
+    "instruction": "图像中的主要对象是什么？",
+    "type": "conv",
+    "question_id": 18
+  },
+  {
+    "id": "000000164255",
+    "image": "COCO_val2014_000000164255.jpg",
+    "instruction": "你认为这张快照中发生了什么？",
+    "type": "detail",
+    "question_id": 19
+  },
+  {
+    "id": "000000164255",
+    "image": "COCO_val2014_000000164255.jpg",
+    "instruction": "这把伞在海滩上有什么用途？",
+    "type": "complex",
+    "question_id": 20
+  },
+  {
+    "id": "000000034096",
+    "image": "COCO_val2014_000000034096.jpg",
+    "instruction": "这所房子的建造处于什么阶段？",
+    "type": "conv",
+    "question_id": 21
+  },
+  {
+    "id": "000000034096",
+    "image": "COCO_val2014_000000034096.jpg",
+    "instruction": "这张照片是关于什么的？",
+    "type": "detail",
+    "question_id": 22
+  },
+  {
+    "id": "000000034096",
+    "image": "COCO_val2014_000000034096.jpg",
+    "instruction": "在目前的状态下，房屋建设的可能的障碍是什么？",
+    "type": "complex",
+    "question_id": 23
+  },
+  {
+    "id": "000000385873",
+    "image": "COCO_val2014_000000385873.jpg",
+    "instruction": "图片中有多少个披萨？",
+    "type": "conv",
+    "question_id": 24
+  },
+  {
+    "id": "000000385873",
+    "image": "COCO_val2014_000000385873.jpg",
+    "instruction": "详细解释图像的视觉内容。",
+    "type": "detail",
+    "question_id": 25
+  },
+  {
+    "id": "000000385873",
+    "image": "COCO_val2014_000000385873.jpg",
+    "instruction": "在一群人中公平分配这些披萨时，可能面临的挑战是什么？",
+    "type": "complex",
+    "question_id": 26
+  },
+  {
+    "id": "000000367571",
+    "image": "COCO_val2014_000000367571.jpg",
+    "instruction": "盒子里有多少个甜甜圈？",
+    "type": "conv",
+    "question_id": 27
+  },
+  {
+    "id": "000000367571",
+    "image": "COCO_val2014_000000367571.jpg",
+    "instruction": "写出给定图像的详细描述。",
+    "type": "detail",
+    "question_id": 28
+  },
+  {
+    "id": "000000367571",
+    "image": "COCO_val2014_000000367571.jpg",
+    "instruction": "在这盒甜甜圈中，能找到哪些独特的口味组合？",
+    "type": "complex",
+    "question_id": 29
+  },
+  {
+    "id": "000000319432",
+    "image": "COCO_val2014_000000319432.jpg",
+    "instruction": "图像中的人在做什么？",
+    "type": "conv",
+    "question_id": 30
+  },
+  {
+    "id": "000000319432",
+    "image": "COCO_val2014_000000319432.jpg",
+    "instruction": "你能给我描述一下这个图像的主要特征吗？",
+    "type": "detail",
+    "question_id": 31
+  },
+  {
+    "id": "000000319432",
+    "image": "COCO_val2014_000000319432.jpg",
+    "instruction": "为什么那个人会把衣服挂在衣架上？",
+    "type": "complex",
+    "question_id": 32
+  },
+  {
+    "id": "000000225738",
+    "image": "COCO_val2014_000000225738.jpg",
+    "instruction": "图像中描绘了多少只长颈鹿？",
+    "type": "conv",
+    "question_id": 33
+  },
+  {
+    "id": "000000225738",
+    "image": "COCO_val2014_000000225738.jpg",
+    "instruction": "写出给定图像的详细描述。",
+    "type": "detail",
+    "question_id": 34
+  },
+  {
+    "id": "000000225738",
+    "image": "COCO_val2014_000000225738.jpg",
+    "instruction": "为什么这些长颈鹿会聚集在同一棵树附近？",
+    "type": "complex",
+    "question_id": 35
+  },
+  {
+    "id": "000000092109",
+    "image": "COCO_val2014_000000092109.jpg",
+    "instruction": "图像的主要焦点是什么？",
+    "type": "conv",
+    "question_id": 36
+  },
+  {
+    "id": "000000092109",
+    "image": "COCO_val2014_000000092109.jpg",
+    "instruction": "这张照片是关于什么的？",
+    "type": "detail",
+    "question_id": 37
+  },
+  {
+    "id": "000000092109",
+    "image": "COCO_val2014_000000092109.jpg",
+    "instruction": "从这张图片中可以推断出长颈鹿的栖息地是什么？",
+    "type": "complex",
+    "question_id": 38
+  },
+  {
+    "id": "000000506483",
+    "image": "COCO_val2014_000000506483.jpg",
+    "instruction": "这个艺术装置包括了什么样的物品？",
+    "type": "conv",
+    "question_id": 39
+  },
+  {
+    "id": "000000506483",
+    "image": "COCO_val2014_000000506483.jpg",
+    "instruction": "非常详细地解释图像的视觉内容。",
+    "type": "detail",
+    "question_id": 40
+  },
+  {
+    "id": "000000506483",
+    "image": "COCO_val2014_000000506483.jpg",
+    "instruction": "艺术装置如何鼓励人与人之间的互动？",
+    "type": "complex",
+    "question_id": 41
+  },
+  {
+    "id": "000000097131",
+    "image": "COCO_val2014_000000097131.jpg",
+    "instruction": "图像的主要焦点是什么？",
+    "type": "conv",
+    "question_id": 42
+  },
+  {
+    "id": "000000097131",
+    "image": "COCO_val2014_000000097131.jpg",
+    "instruction": "你能详细说明提供的图片的元素吗？",
+    "type": "detail",
+    "question_id": 43
+  },
+  {
+    "id": "000000097131",
+    "image": "COCO_val2014_000000097131.jpg",
+    "instruction": "汽车停在路边的原因可能是什么？",
+    "type": "complex",
+    "question_id": 44
+  },
+  {
+    "id": "000000052312",
+    "image": "COCO_val2014_000000052312.jpg",
+    "instruction": "照片中老人的面部有什么不寻常之处？",
+    "type": "conv",
+    "question_id": 45
+  },
+  {
+    "id": "000000052312",
+    "image": "COCO_val2014_000000052312.jpg",
+    "instruction": "这个场景中发生了什么？",
+    "type": "detail",
+    "question_id": 46
+  },
+  {
+    "id": "000000052312",
+    "image": "COCO_val2014_000000052312.jpg",
+    "instruction": "这个男人不同寻常的面部装饰能传达什么信息？",
+    "type": "complex",
+    "question_id": 47
+  },
+  {
+    "id": "000000258285",
+    "image": "COCO_val2014_000000258285.jpg",
+    "instruction": "图像中有多少架飞机可见？",
+    "type": "conv",
+    "question_id": 48
+  },
+  {
+    "id": "000000258285",
+    "image": "COCO_val2014_000000258285.jpg",
+    "instruction": "你在这张图片中看到了什么？",
+    "type": "detail",
+    "question_id": 49
+  },
+  {
+    "id": "000000258285",
+    "image": "COCO_val2014_000000258285.jpg",
+    "instruction": "这些飞机的活动会对鸟类产生什么环境影响？",
+    "type": "complex",
+    "question_id": 50
+  },
+  {
+    "id": "000000081552",
+    "image": "COCO_val2014_000000081552.jpg",
+    "instruction": "那只猫在红色沙发上做什么？",
+    "type": "conv",
+    "question_id": 51
+  },
+  {
+    "id": "000000081552",
+    "image": "COCO_val2014_000000081552.jpg",
+    "instruction": "写出给定图像的详细描述。",
+    "type": "detail",
+    "question_id": 52
+  },
+  {
+    "id": "000000081552",
+    "image": "COCO_val2014_000000081552.jpg",
+    "instruction": "什么因素可能导致猫选择在这个位置睡觉？",
+    "type": "complex",
+    "question_id": 53
+  },
+  {
+    "id": "000000066144",
+    "image": "COCO_val2014_000000066144.jpg",
+    "instruction": "图片中停车标志旁边停着什么类型的车？",
+    "type": "conv",
+    "question_id": 54
+  },
+  {
+    "id": "000000066144",
+    "image": "COCO_val2014_000000066144.jpg",
+    "instruction": "详细解释图像的视觉内容。",
+    "type": "detail",
+    "question_id": 55
+  },
+  {
+    "id": "000000066144",
+    "image": "COCO_val2014_000000066144.jpg",
+    "instruction": "关于该地区的交通状况可以推断出什么？",
+    "type": "complex",
+    "question_id": 56
+  },
+  {
+    "id": "000000203629",
+    "image": "COCO_val2014_000000203629.jpg",
+    "instruction": "图像中的人在做什么？",
+    "type": "conv",
+    "question_id": 57
+  },
+  {
+    "id": "000000203629",
+    "image": "COCO_val2014_000000203629.jpg",
+    "instruction": "你能给我描述一下这个图像的主要特征吗？",
+    "type": "detail",
+    "question_id": 58
+  },
+  {
+    "id": "000000203629",
+    "image": "COCO_val2014_000000203629.jpg",
+    "instruction": "这名男子在打电话时竖起大拇指的原因可能是什么？",
+    "type": "complex",
+    "question_id": 59
+  },
+  {
+    "id": "000000109532",
+    "image": "COCO_val2014_000000109532.jpg",
+    "instruction": "图像中的狗是什么品种？",
+    "type": "conv",
+    "question_id": 60
+  },
+  {
+    "id": "000000109532",
+    "image": "COCO_val2014_000000109532.jpg",
+    "instruction": "这幅图中的关键元素是什么？",
+    "type": "detail",
+    "question_id": 61
+  },
+  {
+    "id": "000000109532",
+    "image": "COCO_val2014_000000109532.jpg",
+    "instruction": "狗的主人可以采取什么措施让狗在房间里感到舒适？",
+    "type": "complex",
+    "question_id": 62
+  },
+  {
+    "id": "000000431165",
+    "image": "COCO_val2014_000000431165.jpg",
+    "instruction": "图像中大象是什么颜色的？",
+    "type": "conv",
+    "question_id": 63
+  },
+  {
+    "id": "000000431165",
+    "image": "COCO_val2014_000000431165.jpg",
+    "instruction": "你认为这张快照中发生了什么？",
+    "type": "detail",
+    "question_id": 64
+  },
+  {
+    "id": "000000431165",
+    "image": "COCO_val2014_000000431165.jpg",
+    "instruction": "在这种情况下，小象可能会有什么潜在的问题？",
+    "type": "complex",
+    "question_id": 65
+  },
+  {
+    "id": "000000020650",
+    "image": "COCO_val2014_000000020650.jpg",
+    "instruction": "橙色盘子里有什么食物？",
+    "type": "conv",
+    "question_id": 66
+  },
+  {
+    "id": "000000020650",
+    "image": "COCO_val2014_000000020650.jpg",
+    "instruction": "这张图中的关键元素是什么？",
+    "type": "detail",
+    "question_id": 67
+  },
+  {
+    "id": "000000020650",
+    "image": "COCO_val2014_000000020650.jpg",
+    "instruction": "关于这个人的饮食选择，可以推断出什么？",
+    "type": "complex",
+    "question_id": 68
+  },
+  {
+    "id": "000000205183",
+    "image": "COCO_val2014_000000205183.jpg",
+    "instruction": "图片中的鸟是什么种类的？",
+    "type": "conv",
+    "question_id": 69
+  },
+  {
+    "id": "000000205183",
+    "image": "COCO_val2014_000000205183.jpg",
+    "instruction": "你在这张图片中看到了什么？",
+    "type": "detail",
+    "question_id": 70
+  },
+  {
+    "id": "000000205183",
+    "image": "COCO_val2014_000000205183.jpg",
+    "instruction": "鸭子在铺砌路面上行走时会遇到什么挑战？",
+    "type": "complex",
+    "question_id": 71
+  },
+  {
+    "id": "000000210299",
+    "image": "COCO_val2014_000000210299.jpg",
+    "instruction": "这个小男孩骑自行车时穿了安全装备吗？",
+    "type": "conv",
+    "question_id": 72
+  },
+  {
+    "id": "000000210299",
+    "image": "COCO_val2014_000000210299.jpg",
+    "instruction": "你能详细说明所提供图片的元素吗？",
+    "type": "detail",
+    "question_id": 73
+  },
+  {
+    "id": "000000210299",
+    "image": "COCO_val2014_000000210299.jpg",
+    "instruction": "为什么小男孩的预防措施值得注意？",
+    "type": "complex",
+    "question_id": 74
+  },
+  {
+    "id": "000000515716",
+    "image": "COCO_val2014_000000515716.jpg",
+    "instruction": "图像中有多少人可见？",
+    "type": "conv",
+    "question_id": 75
+  },
+  {
+    "id": "000000515716",
+    "image": "COCO_val2014_000000515716.jpg",
+    "instruction": "你在这张图片中看到了什么？",
+    "type": "detail",
+    "question_id": 76
+  },
+  {
+    "id": "000000515716",
+    "image": "COCO_val2014_000000515716.jpg",
+    "instruction": "这次聚会原因可能是什么？",
+    "type": "complex",
+    "question_id": 77
+  },
+  {
+    "id": "000000460149",
+    "image": "COCO_val2014_000000460149.jpg",
+    "instruction": "图像中的主要物体是什么？",
+    "type": "conv",
+    "question_id": 78
+  },
+  {
+    "id": "000000460149",
+    "image": "COCO_val2014_000000460149.jpg",
+    "instruction": "描述以下图像。",
+    "type": "detail",
+    "question_id": 79
+  },
+  {
+    "id": "000000460149",
+    "image": "COCO_val2014_000000460149.jpg",
+    "instruction": "想象一下，你正走在这条街上，你要如何知道时间或人行道通向哪个方向？",
+    "type": "complex",
+    "question_id": 80
+  },
+  {
+    "id": "000000293505",
+    "image": "COCO_val2014_000000293505.jpg",
+    "instruction": "这个人骑的是摩托车还是踏板车？",
+    "type": "conv",
+    "question_id": 81
+  },
+  {
+    "id": "000000293505",
+    "image": "COCO_val2014_000000293505.jpg",
+    "instruction": "非常详细地解释图像的视觉内容。",
+    "type": "detail",
+    "question_id": 82
+  },
+  {
+    "id": "000000293505",
+    "image": "COCO_val2014_000000293505.jpg",
+    "instruction": "在这种情况下，骑摩托车的女人可能会面临什么挑战？",
+    "type": "complex",
+    "question_id": 83
+  },
+  {
+    "id": "000000525439",
+    "image": "COCO_val2014_000000525439.jpg",
+    "instruction": "滑板在图像中处于什么位置？",
+    "type": "conv",
+    "question_id": 84
+  },
+  {
+    "id": "000000525439",
+    "image": "COCO_val2014_000000525439.jpg",
+    "instruction": "你能详细说明提供的图片的元素吗？",
+    "type": "detail",
+    "question_id": 85
+  },
+  {
+    "id": "000000525439",
+    "image": "COCO_val2014_000000525439.jpg",
+    "instruction": "在这一刻之前可能发生了什么？",
+    "type": "complex",
+    "question_id": 86
+  },
+  {
+    "id": "000000534270",
+    "image": "COCO_val2014_000000534270.jpg",
+    "instruction": "男人和女人戴的是什么类型的帽子？",
+    "type": "conv",
+    "question_id": 87
+  },
+  {
+    "id": "000000534270",
+    "image": "COCO_val2014_000000534270.jpg",
+    "instruction": "你能给我描述一下这个图像的主要特征吗？",
+    "type": "detail",
+    "question_id": 88
+  },
+  {
+    "id": "000000534270",
+    "image": "COCO_val2014_000000534270.jpg",
+    "instruction": "在这个雨天，伞帽给这对夫妇带来了什么好处？",
+    "type": "complex",
+    "question_id": 89
+  }
+]

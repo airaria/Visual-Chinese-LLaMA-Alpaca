@@ -1,0 +1,494 @@
+[
+  {
+    "image": "1.jpg",
+    "question_id": 1,
+    "question": "这张图片中有什么有趣的地方？请逐格描述。",
+    "type": "reasoning"
+  },
+  {
+    "image": "2.jpg",
+    "question_id": 2,
+    "question": "为什么这张图片很有趣？",
+    "type": "reasoning"
+  },
+  {
+    "image": "3.jpg",
+    "question_id": 3,
+    "question": "这张图片中有什么不寻常的地方？",
+    "type": "reasoning"
+  },
+  {
+    "image": "4.jpg",
+    "question_id": 4,
+    "question": "图像中有文字吗？如果有，你能阅读并向我解释一下这些文字吗？",
+    "type": "ocr"
+  },
+  {
+    "image": "4.jpg",
+    "question_id": 5,
+    "question": "这张图像中有什么有趣的地方？",
+    "type": "reasoning"
+  },
+  {
+    "image": "5.jpg",
+    "question_id": 6,
+    "question": "在这张图像中，飞盘在哪里？",
+    "type": "vqa"
+  },
+  {
+    "image": "5.jpg",
+    "question_id": 7,
+    "question": "在这张图像中，男人在哪里？",
+    "type": "vqa"
+  },
+  {
+    "image": "5.jpg",
+    "question_id": 8,
+    "question": "飞盘和男人之间的空间关系是怎样的？",
+    "type": "vqa"
+  },
+  {
+    "image": "6.jpg",
+    "question_id": 9,
+    "question": "在揉好面团之后，以及把它分成小块之前，我应该做什么？",
+    "type": "vqa"
+  },
+  {
+    "image": "6.jpg",
+    "question_id": 10,
+    "question": "我应该把它在温暖的地方放多久？",
+    "type": "vqa"
+  },
+  {
+    "image": "7.jpg",
+    "question_id": 11,
+    "question": "总金额是多少？",
+    "type": "vqa"
+  },
+  {
+    "image": "8.jpg",
+    "question_id": 12,
+    "question": "除去普通出租车，平均的总加油成本是多少？",
+    "type": "reasoning"
+  },
+  {
+    "image": "9.jpg",
+    "question_id": 13,
+    "question": "除去Ford F150 Lightning，平均的总充电成本是多少？",
+    "type": "reasoning"
+  },
+  {
+    "image": "9.jpg",
+    "question_id": 14,
+    "question": "现在，电动汽车（包括Ford F150 Lightning）的平均充电成本比汽油汽车（包括Ford F150（普通出租车））的平均加油成本便宜多少？让我们逐步思考。",
+    "type": "reasoning"
+  },
+  {
+    "image": "10.jpg",
+    "question_id": 15,
+    "question": "在这个平面图中有多少间卧室？",
+    "type": "vqa"
+  },
+  {
+    "image": "10.jpg",
+    "question_id": 16,
+    "question": "主卧室的尺寸是多少？",
+    "type": "vqa"
+  },
+  {
+    "image": "10.jpg",
+    "question_id": 17,
+    "question": "主卧室有浴室吗？",
+    "type": "vqa"
+  },
+  {
+    "image": "10.jpg",
+    "question_id": 18,
+    "question": "次卧的尺寸是多少？",
+    "type": "vqa"
+  },
+  {
+    "image": "10.jpg",
+    "question_id": 19,
+    "question": "露台比厨房大吗？",
+    "type": "vqa"
+  },
+  {
+    "image": "10.jpg",
+    "question_id": 20,
+    "question": "在这个平面图中，厨房里的电器有哪些？",
+    "type": "vqa"
+  },
+  {
+    "image": "10.jpg",
+    "question_id": 21,
+    "question": "当你从入口进入时，你会看到什么？它的尺寸是多少？",
+    "type": "vqa"
+  },
+  {
+    "image": "10.jpg",
+    "question_id": 22,
+    "question": "你能根据我感兴趣的内容用几句话总结一下这个平面图吗？",
+    "type": "generation"
+  },
+  {
+    "image": "11.jpg",
+    "question_id": 23,
+    "question": "你能阅读这个流程图中的文字，并详细解释一下这个过程吗？",
+    "type": "ocr"
+  },
+  {
+    "image": "11.jpg",
+    "question_id": 24,
+    "question": "流程图中的哪一步是用菱形绘制的？",
+    "type": "vqa"
+  },
+  {
+    "image": "12.jpg",
+    "question_id": 25,
+    "question": "你能阅读这个流程图中的文字，并为我解释一下吗？",
+    "type": "ocr"
+  },
+  {
+    "image": "12.jpg",
+    "question_id": 26,
+    "question": "你能把这个流程图转换成一个简单的Python程序吗？",
+    "type": "generation"
+  },
+  {
+    "image": "13.jpg",
+    "question_id": 27,
+    "question": "Wilkins挣了多少钱？",
+    "type": "vqa"
+  },
+  {
+    "image": "13.jpg",
+    "question_id": 28,
+    "question": "工资最高的人是哪个部门的？",
+    "type": "reasoning"
+  },
+  {
+    "image": "13.jpg",
+    "question_id": 29,
+    "question": "这张表中报告了月工资，你能计算出每个员工的年薪，并将其汇总到一个表中，并按部门分组吗？",
+    "type": "reasoning"
+  },
+  {
+    "image": "13.jpg",
+    "question_id": 30,
+    "question": "行政、财务、营销部门的年度奖金分别为10%、12%和15%。请告诉我Emily、Max和Gloria的奖金。",
+    "type": "reasoning"
+  },
+  {
+    "image": "14.jpg",
+    "question_id": 31,
+    "question": "回答问题 I.1.a。一步步地思考。",
+    "type": "reasoning"
+  },
+  {
+    "image": "15.jpg",
+    "question_id": 32,
+    "question": "你能用HTML为这个网站写一个模板吗？把“joke”和“punchline”换成真的笑话和妙语。",
+    "type": "generation"
+  },
+  {
+    "image": "16.jpg",
+    "question_id": 33,
+    "question": "左边的球员在他的职业生涯中赢得了多少枚总冠军戒指？",
+    "type": "knowledeg vqa"
+  },
+  {
+    "image": "17.jpg",
+    "question_id": 34,
+    "question": "描述这个图像。",
+    "type": "caption"
+  },
+  {
+    "image": "17.jpg",
+    "question_id": 35,
+    "question": "解释一下为什么这张图片很有趣。",
+    "type": "reasoning"
+  },
+  {
+    "image": "18.jpg",
+    "question_id": 36,
+    "question": "尽可能详细地描述此图像。",
+    "type": "caption"
+  },
+  {
+    "image": "19.jpg",
+    "question_id": 37,
+    "question": "尽可能详细地描述此图像。",
+    "type": "caption"
+  },
+  {
+    "image": "20.jpg",
+    "question_id": 38,
+    "question": "解释一下为什么这个模因很有趣。",
+    "type": "reasoning"
+  },
+  {
+    "image": "21.jpg",
+    "question_id": 39,
+    "question": "描述图像。",
+    "type": "caption"
+  },
+  {
+    "image": "21.jpg",
+    "question_id": 40,
+    "question": "这个场景在现实世界中会发生吗？",
+    "type": "reasoning"
+  },
+  {
+    "image": "22.jpg",
+    "question_id": 41,
+    "question": "描述图像。",
+    "type": "caption"
+  },
+  {
+    "image": "22.jpg",
+    "question_id": 42,
+    "question": "这张图像中的场景在现实世界中常见吗？",
+    "type": "reasoning"
+  },
+  {
+    "image": "23.jpg",
+    "question_id": 43,
+    "question": "编写简短的HTML/JS，将这个模板变成一个丰富多彩的网站，其中的“jokes”被一个真正的笑话替代。",
+    "type": "generation"
+  },
+  {
+    "image": "24.jpg",
+    "question_id": 44,
+    "question": "我的植物遇到了什么问题？我该怎么办？",
+    "type": "knowledeg vqa"
+  },
+  {
+    "image": "25.jpg",
+    "question_id": 45,
+    "question": "为什么会发生这种情况？如何解决这个问题？",
+    "type": "reasoning"
+  },
+  {
+    "image": "26.jpg",
+    "question_id": 46,
+    "question": "你能围绕这个图像， 写一首优美的诗吗？",
+    "type": "generation"
+  },
+  {
+    "image": "27.jpg",
+    "question_id": 47,
+    "question": "你能根据这张图像， 写一首非常押韵的大师级说唱歌曲吗？",
+    "type": "generation"
+  },
+  {
+    "image": "28.jpg",
+    "question_id": 48,
+    "question": "你能围绕这个图像，为我的孩子写一个故事吗？",
+    "type": "generation"
+  },
+  {
+    "image": "29.jpg",
+    "question_id": 49,
+    "question": "如图所示，我给我的游戏设计了一个角色。你能为他写一个背景故事吗？",
+    "type": "generation"
+  },
+  {
+    "image": "30.jpg",
+    "question_id": 50,
+    "question": "我们设计了一些新的马克杯，如图所示。你能帮我们写一个广告吗？",
+    "type": "generation"
+  },
+  {
+    "image": "31.jpg",
+    "question_id": 51,
+    "question": "帮我写一个这个产品的广告。",
+    "type": "generation"
+  },
+  {
+    "image": "32.jpg",
+    "question_id": 52,
+    "question": "图像中的这个人是谁？",
+    "type": "knowledeg vqa"
+  },
+  {
+    "image": "33.jpg",
+    "question_id": 53,
+    "question": "描述这个图像。",
+    "type": "caption"
+  },
+  {
+    "image": "33.jpg",
+    "question_id": 54,
+    "question": "你怎么看待这个人的行为？",
+    "type": "reasoning"
+  },
+  {
+    "image": "34.jpg",
+    "question_id": 55,
+    "question": "描述有关图像的内容。",
+    "type": "caption"
+  },
+  {
+    "image": "34.jpg",
+    "question_id": 56,
+    "question": "你对图片中的小男孩有什么要说的？",
+    "type": "generation"
+  },
+  {
+    "image": "35.jpg",
+    "question_id": 57,
+    "question": "你能给我简单介绍一下这部电影吗？",
+    "type": "knowledeg vqa"
+  },
+  {
+    "image": "36.jpg",
+    "question_id": 58,
+    "question": "你能给我详细介绍一下这幅画和创作它的画家吗？",
+    "type": "knowledeg vqa"
+  },
+  {
+    "image": "37.jpg",
+    "question_id": 59,
+    "question": "我应该怎么做这道菜？",
+    "type": "knowledeg vqa"
+  },
+  {
+    "image": "38.jpg",
+    "question_id": 60,
+    "question": "说明该产品的优点。",
+    "type": "generation"
+  },
+  {
+    "image": "39.jpg",
+    "question_id": 61,
+    "question": "给我讲讲这个地方的历史。",
+    "type": "knowledeg vqa"
+  },
+  {
+    "image": "40.jpg",
+    "question_id": 62,
+    "question": "这张照片有什么不寻常的地方吗？",
+    "type": "reasoning"
+  },
+  {
+    "image": "40.jpg",
+    "question_id": 63,
+    "question": "一个人要如何才能从这个房子里出来？",
+    "type": "reasoning"
+  },
+  {
+    "image": "41.jpg",
+    "question_id": 64,
+    "question": "照片上显示了什么？",
+    "type": "caption"
+  },
+  {
+    "image": "41.jpg",
+    "question_id": 65,
+    "question": "这个人感觉怎样？为什么？",
+    "type": "reasoning"
+  },
+  {
+    "image": "42.jpg",
+    "question_id": 66,
+    "question": "要制作这道菜，我需要哪些原料？",
+    "type": "vqa"
+  },
+  {
+    "image": "42.jpg",
+    "question_id": 67,
+    "question": "做这道菜的第一步是什么？",
+    "type": "knowledeg vqa"
+  },
+  {
+    "image": "43.jpg",
+    "question_id": 68,
+    "question": "这是哪个城市？",
+    "type": "knowledeg vqa"
+  },
+  {
+    "image": "43.jpg",
+    "question_id": 69,
+    "question": "你为什么这样认为呢？",
+    "type": "reasoning"
+  },
+  {
+    "image": "44.jpg",
+    "question_id": 70,
+    "question": "这部电影的结尾发生了什么？",
+    "type": "knowledeg vqa"
+  },
+  {
+    "image": "44.jpg",
+    "question_id": 71,
+    "question": "莱昂纳多·迪卡普里奥饰演的角色活下来了吗？",
+    "type": "knowledeg vqa"
+  },
+  {
+    "image": "45.jpg",
+    "question_id": 72,
+    "question": "这张照片里有什么？",
+    "type": "caption"
+  },
+  {
+    "image": "45.jpg",
+    "question_id": 73,
+    "question": "这个鼻子是用什么做的？",
+    "type": "vqa"
+  },
+  {
+    "image": "46.jpg",
+    "question_id": 74,
+    "question": "写一段这两只动物之间的对话。",
+    "type": "generation"
+  },
+  {
+    "image": "47.jpg",
+    "question_id": 75,
+    "question": "右边那个人是谁？",
+    "type": "knowledeg vqa"
+  },
+  {
+    "image": "47.jpg",
+    "question_id": 76,
+    "question": "左边的那个人是谁？",
+    "type": "knowledeg vqa"
+  },
+  {
+    "image": "47.jpg",
+    "question_id": 77,
+    "question": "那个高个子是谁？",
+    "type": "knowledeg vqa"
+  },
+  {
+    "image": "47.jpg",
+    "question_id": 78,
+    "question": "穿着红色的衣服的人是谁？",
+    "type": "knowledeg vqa"
+  },
+  {
+    "image": "47.jpg",
+    "question_id": 79,
+    "question": "那个手里拿着水瓶的人是谁？",
+    "type": "knowledeg vqa"
+  },
+  {
+    "image": "48.jpg",
+    "question_id": 80,
+    "question": "介绍这幅图中的电影角色。",
+    "type": "knowledeg vqa"
+  },
+  {
+    "image": "49.jpg",
+    "question_id": 81,
+    "question": "分析双方的战术特点和阵容，并预测谁会赢得比赛。",
+    "type": "knowledeg vqa"
+  },
+  {
+    "image": "50.jpg",
+    "question_id": 82,
+    "question": "给我讲解一下这件艺术品。",
+    "type": "knowledeg vqa"
+  }
+]
