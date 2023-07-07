@@ -126,7 +126,7 @@ def main():
 
     with gr.Blocks(theme=gr.themes.Default()) as demo:
         github_banner_path = 'https://raw.githubusercontent.com/airaria/Visual-Chinese-LLaMA-Alpaca/main/pics/banner.png'
-        gr.HTML(f'<p align="center"><a href="https://github.com/airari/Visual-Chinese-LLaMA-Alpaca"><img src={github_banner_path} width="700"/></a></p>')
+        gr.HTML(f'<p align="center"><a href="https://github.com/airaria/Visual-Chinese-LLaMA-Alpaca"><img src={github_banner_path} width="700"/></a></p>')
         with gr.Row():
             with gr.Column(scale=3.5):
                 chatbot = gr.Chatbot().style(height=400)

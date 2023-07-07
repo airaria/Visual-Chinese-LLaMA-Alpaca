@@ -7,7 +7,7 @@
 </p>
 
 <p align="center">
-<img alt="GitHub" src="https://img.shields.io/github/license/airaria/Visual-Chinese-LLaMA-Alpaca.svg?color=blue">
+<img alt="GitHub" src="https://img.shields.io/github/license/airaria/Visual-Chinese-LLaMA-Alpaca.svg?color=red">
 <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/airaria/Visual-Chinese-LLaMA-Alpaca">
 <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/airaria/Visual-Chinese-LLaMA-Alpaca">
 <a href='https://huggingface.co/ziqingyang/visualcla-7b-v0.1'><img src='https://img.shields.io/badge/🤗 Hugging Face-Model-purple'></a>
