@@ -39,7 +39,12 @@ The main features of this project include:
 
 ## Table of Contents <!-- omit from toc --> 
 
-- [Table of Contents](#table-of-contents)
+- [Intruction](#intruction)
+- [Download](#download)
+- [Usage](#usage)
+- [Examples](#examples)
+- [Limitations](#limitations)
+
 
 ## Intruction
 
