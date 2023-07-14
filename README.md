@@ -257,7 +257,7 @@ python scripts/inference/inference.py \
 * `--visualcla_model`：使用合并脚本合并后的VisualCLA模型
    - 若未提供此参数，则模型将合并`text_model`，`vision_model`和`lora_model`并用于推理
    - 若提供此参数，则加载的模型将以此参数为准，无需再提供 `text_model`，`vision_model`和`lora_model`
-* `--image_file`：模型读入的图片名，支持`png`，`jpg`等标准图片格式。
+* `--image_file`（可选）：模型读入的图片名，支持`png`，`jpg`等标准图片格式。不提供此参数时，模型将只基于文本内容进行回复。
 * `--load_in_8bit`（可选）：LLM部分是否使用8bit推理
 * `--gpus`（可选）：使用的GPU设备id，默认为0
 * `--only_cpu`（可选）：是否仅使用CPU推理
