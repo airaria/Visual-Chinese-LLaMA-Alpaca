@@ -17,7 +17,7 @@ parser.add_argument('--lora_model', default=None, type=str,
         help="Path to the VisualCLA LorA model")
 parser.add_argument('--visualcla_model', default=None, type=str,
         help="Path to the merged VisualCLA model")
-parser.add_argument('--image_file', default=None,required=True,type=str,
+parser.add_argument('--image_file', default=None,required=False,type=str,
         help="The input image file")
 parser.add_argument('--gpus', default="0", type=str,
         help="GPU(s) to use for inference")
@@ -90,7 +90,8 @@ def main():
     with torch.no_grad():
         history = []
         image_path = args.image_file
-        print(f'Image: {image_path}')
+        if image_path is not None:
+            print(f'Image: {image_path}')
         while True:
             text = input('>')
             if type(text) != str:
