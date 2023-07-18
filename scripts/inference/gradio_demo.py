@@ -73,7 +73,15 @@ def parse_text(text):
     return text
 
 
-def predict(input_text, image_path, chatbot, max_new_tokens, top_p, top_k, temperature, history):
+def predict(input_text, image_path_upload, image_path_webcam, chatbot, max_new_tokens, top_p, top_k, temperature, history, selected):
+    if selected=='Upload':
+        image_path = image_path_upload
+        print("Image from upload: ", image_path_upload)
+    elif selected=='Webcam':
+        image_path = image_path_webcam
+        print("Image from webcam: ", image_path_webcam)
+    else:
+        raise ValueError(selected)
     DEFAULT_GENERATION_CONFIG.top_p = top_p
     DEFAULT_GENERATION_CONFIG.top_k = top_k
     DEFAULT_GENERATION_CONFIG.max_new_tokens = max_new_tokens
@@ -125,6 +133,11 @@ def main():
     model.eval()
 
     with gr.Blocks(theme=gr.themes.Default()) as demo:
+
+        selected_state = gr.State("Upload")
+        def on_select(evt: gr.SelectData):  # SelectData is a subclass of EventData
+            return evt.value
+    
         github_banner_path = 'https://raw.githubusercontent.com/airaria/Visual-Chinese-LLaMA-Alpaca/main/pics/banner.png'
         gr.HTML(f'<p align="center"><a href="https://github.com/airaria/Visual-Chinese-LLaMA-Alpaca"><img src={github_banner_path} width="700"/></a></p>')
         with gr.Row():
@@ -136,7 +149,12 @@ def main():
                         submitBtn = gr.Button("提交", variant="primary")
                         emptyBtn = gr.Button("清除")
             with gr.Column(scale=2.5):
-                    image_path = gr.Image(type="pil", label="Image", value=None).style(height=310)
+                    with gr.Tab("Upload") as t1:
+                        image_path_upload = gr.Image(type="pil", label="Image", value=None).style(height=310)
+                        t1.select(on_select,outputs=selected_state)
+                    with gr.Tab("Webcam") as t2:
+                        image_path_webcam = gr.Image(type="pil", label="Image", value=None, source='webcam')
+                        t2.select(on_select, outputs=selected_state)
                     max_new_tokens = gr.Slider(0, 1024, value=512, step=1.0, label="Max new tokens", interactive=True)
                     top_p = gr.Slider(0, 1, value=0.9, step=0.01, label="Top P", interactive=True)
                     top_k = gr.Slider(0, 100, value=40, step=1, label="Top K", interactive=True)
@@ -144,11 +162,12 @@ def main():
 
         history = gr.State([])
 
-        submitBtn.click(predict, [user_input, image_path, chatbot, max_new_tokens, top_p, top_k, temperature, history], [chatbot, history],
+        submitBtn.click(predict, [user_input, image_path_upload, image_path_webcam, chatbot, max_new_tokens, top_p, top_k, temperature, history, selected_state], [chatbot, history],
                         show_progress=True)
-        image_path.clear(reset_state, outputs=[image_path, chatbot, history], show_progress=True)
+        image_path_upload.clear(reset_state, outputs=[image_path_upload, chatbot, history], show_progress=True)
+        image_path_webcam.clear(reset_state, outputs=[image_path_webcam, chatbot, history], show_progress=True)
         submitBtn.click(reset_user_input, [], [user_input])
-        emptyBtn.click(reset_state, outputs=[image_path, chatbot, history], show_progress=True)
+        emptyBtn.click(lambda: (None, None, [], []), outputs=[image_path_upload, image_path_webcam, chatbot, history], show_progress=True)
 
         print(gr.__version__)
 
