@@ -14,13 +14,13 @@ pip install -r requirements.txt
 
 ## Step 2: 复制``extention``相关代码及配置
 
-将[VCLA扩展相关代码](visualcla)目录复制到Text-Generation-webUI库的``extensions/multimodal/pipelines``目录下
+1. 将[VCLA扩展相关代码](visualcla)目录复制到Text-Generation-webUI库的``extensions/multimodal/pipelines``目录下
 
 ```bash
 cp -r [Path/For/Visual-Chinese-LLaMA-Alpaca]/scripts/inference/text_generation_webui/visualcla extensions/multimodal/pipelines/
 ```
 
-将[settings](settings)目录下的配置文件``settings-visualcla.yaml``，
+2. 将[settings](settings)目录下的配置文件``settings-visualcla.yaml``，
 ``VisualCLA-Inference.yaml``，
 ``VisualCLA.yaml``复制到Text-Generation-webUI库下的相应位置。
 
@@ -46,7 +46,7 @@ text-generation-webui
   |--settings-visualcla.yaml
 ```
 
-进入Text-Generation-webUI库根目录，在``models/config.yaml``中添加相关配置：首行加入``visualcla``，然后按如下截图加入相关设置。具体改动可参考[这里](config.yaml)。
+3. 进入Text-Generation-webUI库根目录，在``models/config.yaml``中添加相关配置：首行加入``visualcla``，然后按如下截图加入相关设置。具体改动可参考[这里](config.yaml)。
 
 ![](example_images/config_yaml_1.png)
 
@@ -54,11 +54,11 @@ text-generation-webui
 
 ## Step 3: 修改text-generation-webui代码
 
-修改图片在指令中的拼接顺序。
+1. 修改图片在指令中的拼接顺序。
 在``extensions/multimodal/script.py``中添加``add_chat_picture_visualcla(...)``方法，并在``ui()``方法中将``add_chat_picture``替换为``add_chat_picture_visualcla``。``add_chat_picture_visualcla(...)``方法和具体改动参考[script.py](script.py)
 
 
-修改``modules/LoRA.py``文件，在``PeftModel.from_pretrained``前添加一行代码，调整embedding size。
+2. 修改``modules/LoRA.py``文件，在``PeftModel.from_pretrained``前添加一行代码，调整embedding size。
 ```python
 shared.model.resize_token_embeddings(len(shared.tokenizer)) # 新加内容
 shared.model = PeftModel.from_pretrained(shared.model, Path(f"{shared.args.lora_dir}/{lora_names[0]}"), **params) # 原有代码
@@ -85,49 +85,57 @@ shared.model = PeftModel.from_pretrained(shared.model, Path(f"{shared.args.lora_
 
 ## Step 5: 模型权重处理
 
-如果已[合并权重](../../../README.md#合并模型可选推荐)（推荐）：
+### 如果已[合并权重](../../../README.md#合并模型可选推荐)（推荐）：
 
-如果已经通过[合并脚本](../../../scripts/merge_llama_with_visualcla_lora.py)将权重合并，将合并好的权重的文本端部分（``text_encoder``目录）复制到``models``目录下，注意复制后的目录名。然后，将tokenizer的相关文件复制到该目录下。
+如果已经通过[合并脚本](../../../scripts/merge_llama_with_visualcla_lora.py)将权重合并，只需要将文本端部分权重放到text-generation-webui的``models``目录下，其余权重的加载通过修改``settings-visualcla.yaml``中的参数即可，具体步骤如下：
+
+1. 将合并好的权重的文本端部分（``text_encoder``目录）复制到``models``目录下，注意复制后的目录名。然后，将tokenizer的相关文件复制到该目录下。
 
 ```bash
+# 复制文本端权重
 cp -r [Path/For/Merged_Model]/text_encoder models/visualcla_merged-7b
+# 复制 tokenzier 相关文件
 cp [Path/For/Merged_Model]/added_tokens.json models/visualcla_merged-7b/
 cp [Path/For/Merged_Model]/special_tokens_map.json models/visualcla_merged-7b/
 cp [Path/For/Merged_Model]/tokenizer_config.json models/visualcla_merged-7b/
 cp [Path/For/Merged_Model]/tokenizer.model models/visualcla_merged-7b/
 ```
 
-在``settings-visualcla.yaml``中修改``visualcla_merged_model``参数为合并后权重的路径
+2. 在``settings-visualcla.yaml``中修改``visualcla_merged_model``参数为合并后权重的路径
 
 ```yaml
 visualcla_merged_model : [Path/For/Merged_Model]
 ```
 
-如果未[合并权重](../../../README.md#合并模型可选推荐)：
+### 如果未[合并权重](../../../README.md#合并模型可选推荐)：
 
-通过[权重转换脚本](convert_ckpt_for_tgwebui.py)转换权重后，得到两个权重目录：文本端权重``[Path/For/Lora_model]_text_lora_model_tgwebui``和图像端权重``[Path/For/Lora_model]_vision_lora_model_tgwebui``。
+如果未合并权重，需要先将权重文件进行转换，然后将文件拷贝到相应位置并修改``settings-visualcla.yaml``。具体步骤如下：
+
+1. 通过[权重转换脚本](convert_ckpt_for_tgwebui.py)转换权重后，得到两个权重目录：文本端权重``[Path/For/Lora_model]_text_lora_model_tgwebui``和图像端权重``[Path/For/Lora_model]_vision_lora_model_tgwebui``。
 
 ```bash
 python convert_ckpt_for_tgwebui.py \
     --lora_model=[Path/For/Lora_model]
 ```
 
-将文本端权重``[Path/For/Lora_model]_text_lora_model_tgwebui``复制到``loras``目录下。
+2. 将文本端权重``[Path/For/Lora_model]_text_lora_model_tgwebui``复制到``loras``目录下。
 
 ```bash
 cp -r [Path/For/Lora_model]_text_lora_model_tgwebui loras/visualcla_lora
 ```
 
-在``settings-visualcla.yaml``中修改``visualcla_vision_lora_model``参数为图像端权重的路径``[Path/For/Lora_model]_vision_lora_model_tgwebui``
+3. 在``settings-visualcla.yaml``中修改``visualcla_vision_lora_model``参数为图像端权重的路径``[Path/For/Lora_model]_vision_lora_model_tgwebui``
 
 ```yaml
 visualcla_vision_lora_model : [Path/For/Lora_model]_vision_lora_model_tgwebui
 ```
 
-将``Chinese-alpaca-plus-7b``合并后的权重复制到``models``目录下（Chinese-Alpaca-Plus 7B模型的获取与合并方法请参考[Chinese-LLaMA-Alpaca模型合并与转换](https://github.com/ymcui/Chinese-LLaMA-Alpaca/wiki/模型合并与转换)），并将VisualCLA的tokenizer的相关文件复制到该目录下。
+4. 将``Chinese-alpaca-plus-7b``合并后的权重复制到``models``目录下（Chinese-Alpaca-Plus 7B模型的获取与合并方法请参考[Chinese-LLaMA-Alpaca模型合并与转换](https://github.com/ymcui/Chinese-LLaMA-Alpaca/wiki/模型合并与转换)），并将VisualCLA的tokenizer的相关文件复制到该目录下。
 
 ```bash
+# 复制 Chinese-alpaca-plus-7b 权重
 cp -r [Path/For/Chinese-alpaca-plus-7b] models/chinese-alpaca-plus-7b
+# 复制 tokenizer 相关文件
 cp [Path/For/Lora_model]/added_tokens.json models/visualcla_merged-7b/
 cp [Path/For/Lora_model]/special_tokens_map.json models/visualcla_merged-7b/
 cp [Path/For/Lora_model]/tokenizer_config.json models/visualcla_merged-7b/
@@ -136,7 +144,7 @@ cp [Path/For/Lora_model]/tokenizer.model models/visualcla_merged-7b/
 
 ## Step 6: 运行
 
-按以下命令即可启动Text-Generation-webUI交互界面。
+执行以下命令即可启动Text-Generation-webUI交互界面。
 
 ```bash
 # 已合并权重
@@ -167,4 +175,4 @@ python server.py \
 * `--load-in-8bit`（可选）：LLM部分是否使用8bit推理
 * `--cpu`（可选）：是否仅使用CPU推理
 
-更详细的使用说明请参考[Text-Generation-webUI库](https://github.com/oobabooga/text-generation-webui)的官方文档
+更详细的使用说明请参考[Text-Generation-webUI](https://github.com/oobabooga/text-generation-webui)的官方文档

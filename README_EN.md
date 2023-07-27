@@ -285,7 +285,7 @@ Parameters:
 
 * `--visualcla_model`：Merged VisualCLA model
 * `--share` (optional)：if create public shared link
-* `load_in_8bit` (optional)：If use 8bit for LLM inference
+* `--load_in_8bit` (optional)：If use 8bit for LLM inference
 * `--gpus` (optional)：GPU ids，default 0
 * `--only_cpu` (optional)：Use cpu or not
 * `--no_stream` (optional)：Not using streaming output

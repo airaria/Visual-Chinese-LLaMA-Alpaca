@@ -281,7 +281,7 @@ python scripts/inference/gradio_demo.py --visualcla_model visualcla_model --load
 
 * `--visualcla_model`：使用合并脚本合并后的VisualCLA模型
 * `--share`（可选）：是否创建公开可访问链接
-* `load_in_8bit`（可选）：LLM部分是否使用8bit推理
+* `--load_in_8bit`（可选）：LLM部分是否使用8bit推理
 * `--gpus`（可选）：使用的GPU设备id，默认为0
 * `--only_cpu`（可选）：是否仅使用CPU推理
 * `--no_stream`（可选）：不使用流式输出形式
